@@ -1,0 +1,30 @@
+initialise: 
+  DOF : 3 
+  nodes : 7441                         ## number of nodes u want to test
+  time_states : 32                        
+  split_size : 0.2                       ## data set split(train and test)   
+  simulation : 50                   ## number of simulation u have
+
+Autoencoder_paramters: 
+  latent : 8                        # dimensionality reduction
+  lr : 0.0001                           ## initial learning rate                       
+  epoch : 1000
+  batchsize : 7
+  architecture :  4                 # three diffrent architecture for convolutional 1d and 2d
+  model : 'conv1d'                           #    convolutional 1d or is convolutional 2d
+  kernal : 3                        # for conv 1d size only 3 and 5 applicable
+  padding : "valid"                   # padding either (same or valid) if padding same ,zeros added first and
+                                      #last column not to reduce the dimension in column, if padding valid dimension reduce in colums as well
+                       
+  activation : 'relu'                  # relu, leakyrelu and elu 
+  convolution_layer1 : 1500            ## number of filter in first convolutional layer
+  convolution_layer2 : 750                               ## second convolution layer
+  convolution_layer3 : 375                                  ## third convolution layer
+  convolution_layer4 : 150                                  ## fourth convolution layer
+  convolution_layer5 : 0
+
+
+
+
+
+
